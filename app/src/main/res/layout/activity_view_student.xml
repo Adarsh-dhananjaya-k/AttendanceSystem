@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".forgot">
+    tools:context=".view_student">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButton2"
         android:layout_width="412dp"
         android:layout_height="732dp"
         android:contentDescription="@string/app_name"
@@ -16,38 +16,58 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".forgot">
+        tools:context=".teacher_view_students">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password"
+            android:text="View Students"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp" />
 
-        <EditText
-            android:id="@+id/etEmail"
+        <Spinner
+            android:id="@+id/spinnerClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="username"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/appbar_scrolling_view_behavior"
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/btnResetPassword"
+            android:id="@+id/btnViewStudents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reset Password"
+            android:text="View Students"
             android:layout_marginTop="16dp" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewStudents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvNoStudents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No students found."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
